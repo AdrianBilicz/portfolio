@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel='stylesheet' href='/css/styles.css' />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="flex-nav">
+				<h1 class="logo">Adrian Bilicz</h1>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/projects">Projects</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="hero">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="intro">
+						<h2 class="title">Welcome to my porfolio site</h2>
+						<p>I'm a full stack software developer focused on Node &amp; React/Redux.</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="photo">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<section class="projects">
+		<h2 class="text-center">Projects</h2>
+		<div class="container">
+			<div class="row">
+				{{#list}}
+				<div id="{{_id}}" class="col-md-4">
+					<div class="project text-center container-fluid">
+						<p class="project-title">
+							{{#tools}}
+							<span>{{.}}</span>
+							{{/tools}}
+						</p>
+						<div class="project-thumb"><img width="96" src="./images/{{thumb}}" alt=""></div>
+						<h3>{{name}}</h3>
+						<p class="destription">{{description}}</p>
+						<a href="/project/{{_id}}" class="btn btn-info">View</a>
+					</div>
+				</div>
+				{{/list}}
+			</div>
+		</div>
+	</section>
+	<section class="skills">
+		<div class="container">
+			<h2 class="text-center">Skills</h2>
+			<div class="row">
+				<div class=" text-center feature col-sm-4"><i class="fa fa-user-plus" aria-hidden="true"></i><span>USER ACCOUNTS &amp; PROFILES</span></div>
+				<div class=" text-center feature col-sm-4"><i class="fa fa-map-marker" aria-hidden="true"></i><span>GOOGLE MAPS INTEGRATION</span></div>
+				<div class=" text-center feature col-sm-4"><i class="fa fa-picture-o" aria-hidden="true"></i><span>IMAGE UPLOADING WITH CLOUDINARY</span></div>
+			</div>
+			<div class="row">
+				<div class=" text-center feature col-sm-4"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>EMAIL SENDING VIA SENDGRID</span></div>
+				<div class=" text-center feature col-sm-4"><i class="fa fa-code" aria-hidden="true"></i><span>JSON PARSING OF APIS, SUCH AS INSTAGRAM, TWITTER &amp; YELP</span></div>
+				<div class=" text-center feature col-sm-4"><i class="fa fa-magnet" aria-hidden="true"></i><span>DATA SCRAPING WITH CHEERIO</span></div>
+			</div>
+		</div>
+	</section>
+	<section class="email">
+		<h3 class="text-center">Get In Touch</h3>
+		<div class="container">
+			<div class="row">
+				<div class="offset-md-2 col-md-8">
+					<form action="/contact" method="post">
+						<input class="form-control" type="text" name="reciepient" placeholder="Recipient"><br>
+						<input class="form-control" type="text" name="subject" placeholder="Subject"><br>
+						<textarea class="form-control" name="content" id="" cols="30" rows="5" placeholder="Content"></textarea><br>
+						<button class="btn btn-info" type="submit">Send</button>
+					</form>
+				</div>
+			</section>
+		</body>
+		</html>

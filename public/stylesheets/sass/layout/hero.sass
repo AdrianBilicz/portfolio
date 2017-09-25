@@ -1,0 +1,45 @@
+.wrapper
+	width: 100%
+	padding: 0 15px
+	background: linear-gradient(135deg, #fff, #ddd);
+	.photo
+		margin: 0 -15px
+		background-image: url("../images/silicon-valley.png")
+		background-size: cover
+		padding-bottom: 80%
+
+	@media (max-width: 991px)
+		.photo
+			display: none
+	.intro
+		padding: 1em 2em
+		display: flex
+		justify-content: center
+		height: 100%
+		flex-direction: column
+		h2
+			margin-bottom: 0.7em
+			font-size: 1.8em
+			text-transform: uppercase
+		p
+			display: block
+			font-size: 1.2em
+			font-weight: $font-light
+
+	@media (max-width: 991px)
+		.intro
+			align-items: center
+			padding: 4em 1em
+			p
+				text-align: center
+	@media (max-width: 575px)
+		.intro
+			align-items: center
+			padding: 1em 0
+			p
+				text-align: center
+
+
+
+
+

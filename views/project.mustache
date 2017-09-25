@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel='stylesheet' href='/css/styles.css' />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="flex-nav">
+				<h1 class="logo">Adrian Bilicz</h1>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/projects">Projects</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="single-project">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>{{name}}</h3>
+					<a class="link" href="{{url}}">{{url}}</a>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="project text-center">
+						<div class="project-thumb"><img src="/images/{{image}}" alt=""></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class=" container-fluid">
+						<div class="project-description">
+							{{description}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="tools">
+				{{#tools}}
+				<li>{{.}}</li>
+				{{/tools}}
+			</ul>
+		</div>
+	</section>
+</body>
+</html>
